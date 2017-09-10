@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>animation</title>
+</head>
+<body>
+	<noscript>é necessario javascript para rodar a animação</noscript>
+
+	<p>tamanho reduzido pra não ficar tão pesado na renderização</p>
+    <div id="backgroundLevel4" class="backAuth"></div>
+    <div id="backgroundLevel3" class="backAuth"></div>
+    <div id="backgroundLevel2" class="backAuth"></div>
+    <div id="backgroundLevel1" class="backAuth"></div>
+
+	<script type="text/javascript">
+
+		// a funcção detecta se é um smartphone
+		function detectmob() { 
+		   if( navigator.userAgent.match(/Android/i)
+		     || navigator.userAgent.match(/webOS/i)
+		     || navigator.userAgent.match(/iPhone/i)
+		     || navigator.userAgent.match(/iPad/i)
+		     || navigator.userAgent.match(/iPod/i)
+		     || navigator.userAgent.match(/BlackBerry/i)
+		     || navigator.userAgent.match(/Windows Phone/i)
+		   ){
+		      return true;
+		    }
+		   else {
+		      return false;
+		    }
+		}
+
+	    if(!detectmob()){
+	      document.addEventListener("mousemove",(e)=>{
+	        document.getElementById("backgroundLevel1").style.backgroundPosition=(50+((e.pageX/window.innerWidth)-0.5)*250).toString()+"% 50%";
+	        document.getElementById("backgroundLevel2").style.backgroundPosition=(50+((e.pageX/window.innerWidth)-0.5)*150).toString()+"% 50%";
+	        document.getElementById("backgroundLevel3").style.backgroundPosition=(50+((e.pageX/window.innerWidth)-0.5)*50).toString()+"% 50%";
+	      });
+	    }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@-webkit-keyframes slideCloud {
+    from{
+        background-position:0px;
+    }
+    to{
+        background-position:3024px;
+    }
+}
+p{
+  color:#aaa;
+}
+#backgroundLevel1{
+  background-image: url(postes.svg);
+  background-position: 50% 50%;
+  background-repeat: repeat-x;
+}
+#backgroundLevel2{
+  background-image: url(casas.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#backgroundLevel3{
+  background-image: url(predios.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#backgroundLevel4{
+  animation: slideCloud 100s infinite;
+  background-image: url(nuvens.svg);
+  background-repeat: repeat-x;
+}
+
+.backAuth{
+  position: fixed;
+  height: 60vh;
+  width: 50vw;
+  top: 20vh;
+  left: 25vw;
+  background-size: 105%;
+}
